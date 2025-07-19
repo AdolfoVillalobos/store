@@ -17,5 +17,7 @@ Rails.application.routes.draw do
     resource :subscribers, only: [:create]
   end
 
+  resource :unsubscribe, only: [:show]
+
   root "products#index"
 end
