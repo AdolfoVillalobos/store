@@ -8,12 +8,12 @@ class SubscribersController < ApplicationController
     end
 
     private
-    
+
     def set_product
         @product = Product.find(params[:product_id])
     end
 
     def subscriber_params
-        params.expect(subscriber: [:email_address])
+        params.expect(subscriber: [ :email_address ])
     end
 end
